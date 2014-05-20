@@ -3406,7 +3406,7 @@ static int scan_common(int desc, cl_fmap_t *map, const char **virname, unsigned 
             ctx.options &= ~CL_SCAN_FILE_PROPERTIES;
             rc = cli_mem_scandesc(jstring, strlen(jstring), &ctx);
         }
-        cli_errmsg("%s\n", jstring); //temp
+        cli_dbgmsg("%s\n", jstring); //temp
 
         if (ctx.engine->keeptmp && NULL!=jstring) {
             int ret = CL_SUCCESS, fd = -1;
