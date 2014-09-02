@@ -802,7 +802,6 @@ with_system_llvm
 enable_llvm
 enable_optimized
 enable_all_jit_targets
-with_libjson
 '
       ac_precious_vars='build_alias
 host_alias
@@ -1465,8 +1464,6 @@ Optional Packages:
                         (or the compiler's sysroot if not specified).
   -with-system-llvm       Use system llvm instead of built-in, requires full
                           path to llvm-config
-  --with-libjson=DIR   path to directory containing libjson (default=
-    /usr/local or /usr if not found in /usr/local)
 
 Some influential environment variables:
   CXX         C++ compiler command
@@ -15906,10 +15903,6 @@ fi
 
 
 
-
-# Check whether --with-libjson was given.
-if test "${with_libjson+set}" = set; then :
-  withval=$with_libjson;
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libjson installation" >&5
 $as_echo_n "checking for libjson installation... " >&6; }
 if test "X$withval" != "Xyes"
@@ -15937,13 +15930,6 @@ else
 fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $LIBJSON_HOME" >&5
 $as_echo "$LIBJSON_HOME" >&6; }
-
-else
-
-have_json_header="no"
-
-fi
-
 
 if test "X$have_json_header" = "Xyes"
 then
