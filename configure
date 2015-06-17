@@ -21228,7 +21228,7 @@ $as_echo "#define HAVE_LIBNCURSES 1" >>confdefs.h
 			LIBNCURSES="$ac_cv_findlib_NCURSES_libs"
 			LTLIBNCURSES="$ac_cv_findlib_NCURSES_ltlibs"
 			INCNCURSES="$ac_cv_findlib_NCURSES_inc"
-			CURSES_CPPFLAGS="$INCNCURSES"; CURSES_LIBS="$LTLIBNCURSES";
+			CURSES_CPPFLAGS="$INCNCURSES"; CURSES_LIBS="-ltinfo $LTLIBNCURSES";
 	     CURSES_INCLUDE="<ncurses/ncurses.h>"
 
 fi
@@ -21753,7 +21753,7 @@ $as_echo "#define HAVE_LIBNCURSES 1" >>confdefs.h
 			LIBNCURSES="$ac_cv_findlib_NCURSES_libs"
 			LTLIBNCURSES="$ac_cv_findlib_NCURSES_ltlibs"
 			INCNCURSES="$ac_cv_findlib_NCURSES_inc"
-			CURSES_CPPFLAGS="$INCNCURSES"; CURSES_LIBS="$LTLIBNCURSES";
+			CURSES_CPPFLAGS="$INCNCURSES"; CURSES_LIBS="-ltinfo $LTLIBNCURSES";
 	     CURSES_INCLUDE="<ncurses.h>"
 
 fi
@@ -22280,7 +22280,7 @@ $as_echo "#define HAVE_LIBPDCURSES 1" >>confdefs.h
 			LTLIBPDCURSES="$ac_cv_findlib_PDCURSES_ltlibs"
 			INCPDCURSES="$ac_cv_findlib_PDCURSES_inc"
 			CURSES_CPPFLAGS="$INCPDCURSES";
-			     CURSES_LIBS="$LTLIBPDCURSES";
+			     CURSES_LIBS="-ltinfo $LTLIBPDCURSES";
 			     CURSES_INCLUDE="<curses.h>"
 
 fi
