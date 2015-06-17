@@ -7,7 +7,7 @@ if test "$enable_clamdtop" != "no"; then
 AC_LIB_FIND([ncurses], [ncurses/ncurses.h],
 	    AC_LANG_PROGRAM([#include <ncurses/ncurses.h>],
 			    [initscr(); KEY_RESIZE;]),
-	    [CURSES_CPPFLAGS="$INCNCURSES"; CURSES_LIBS="$LTLIBNCURSES";
+	    [CURSES_CPPFLAGS="$INCNCURSES"; CURSES_LIBS="-ltinfo $LTLIBNCURSES";
 	     CURSES_INCLUDE="<ncurses/ncurses.h>"],
 	    [])
 
@@ -16,7 +16,7 @@ if test "X$HAVE_LIBNCURSES" != "Xyes"; then
     AC_LIB_FIND([ncurses], [ncurses.h],
 	    AC_LANG_PROGRAM([#include <ncurses.h>],
 			    [initscr(); KEY_RESIZE;]),
-	    [CURSES_CPPFLAGS="$INCNCURSES"; CURSES_LIBS="$LTLIBNCURSES";
+	    [CURSES_CPPFLAGS="$INCNCURSES"; CURSES_LIBS="-ltinfo $LTLIBNCURSES";
 	     CURSES_INCLUDE="<ncurses.h>"],
 	    [])
 fi
@@ -26,7 +26,7 @@ if test "X$HAVE_LIBNCURSES" != "Xyes"; then
 			    AC_LANG_PROGRAM([#include <curses.h>],
 					    [initscr(); KEY_RESIZE;]),
 			    [CURSES_CPPFLAGS="$INCPDCURSES";
-			     CURSES_LIBS="$LTLIBPDCURSES";
+			     CURSES_LIBS="-ltinfo $LTLIBPDCURSES";
 			     CURSES_INCLUDE="<curses.h>"],
 			    [AC_MSG_WARN([****** not building clamdtop: ncurses not found])])
 fi
